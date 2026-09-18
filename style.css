@@ -213,7 +213,7 @@ footer {
 }
 
 /* =================================
-   3D Burning Flame Background Effect
+   3D Burning Flame Background
    ================================= */
 
 body::after {
@@ -222,62 +222,144 @@ body::after {
 
     position: fixed;
 
-    bottom: -250px;
+    bottom: -80px;
 
     left: 50%;
 
-    width: 450px;
+    width: 180px;
 
-    height: 450px;
+    height: 350px;
+
+    transform: translateX(-50%) rotate(45deg);
+
 
     background:
-    radial-gradient(
-        circle,
-        #fff700 0%,
-        #ff9800 25%,
-        #ff3300 45%,
-        transparent 70%
+
+    linear-gradient(
+        45deg,
+        #ff0000,
+        #ff6600 35%,
+        #ffcc00 65%,
+        #ffffff
     );
 
-    transform: translateX(-50%);
 
-    filter: blur(35px);
+    border-radius:
+    100% 0 100% 100%;
 
-    opacity: 0.45;
 
-    z-index: -1;
+    filter: blur(8px);
 
-    animation: flameGlow 2s infinite alternate;
+
+    opacity:0.9;
+
+
+    z-index:-1;
+
+
+    animation: fireFlicker 0.8s infinite alternate;
 
 }
 
 
-@keyframes flameGlow {
+/* Inner flame */
 
-    0% {
+body::before {
+
+    content:"";
+
+    position:fixed;
+
+    bottom:-30px;
+
+    left:50%;
+
+
+    width:80px;
+
+    height:220px;
+
+
+    transform:
+    translateX(-50%)
+    rotate(45deg);
+
+
+    background:
+
+    linear-gradient(
+    45deg,
+    #ff3300,
+    #ffff00,
+    white
+    );
+
+
+    border-radius:
+    100% 0 100% 100%;
+
+
+    filter:blur(4px);
+
+
+    opacity:0.95;
+
+
+    z-index:-1;
+
+
+    animation:
+    innerFire 0.5s infinite alternate;
+
+}
+
+
+
+@keyframes fireFlicker {
+
+
+    from {
 
         transform:
         translateX(-50%)
-        scale(1)
-        rotate(-3deg);
+        rotate(40deg)
+        scale(1);
 
     }
 
-    50% {
+
+    to {
 
         transform:
         translateX(-50%)
-        scale(1.15)
-        rotate(3deg);
+        rotate(55deg)
+        scale(1.15);
 
     }
 
-    100% {
+}
+
+
+
+@keyframes innerFire {
+
+
+    from {
 
         transform:
         translateX(-50%)
-        scale(0.95)
-        rotate(-2deg);
+        rotate(35deg)
+        scale(1);
+
+    }
+
+
+    to {
+
+        transform:
+        translateX(-50%)
+        rotate(60deg)
+        scale(1.2);
 
     }
 
