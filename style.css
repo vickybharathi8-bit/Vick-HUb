@@ -1,34 +1,15 @@
-/* Universe + Flame Background */
-
-body::before {
-
-    content:"";
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    z-index:-2;
-
-
-    background:
-    radial-gradient(circle at 50% 100%,
-    rgba(255,80,0,0.8),
-    transparent 25%),
-
-    radial-gradient(circle at top,
-    #1a1a40,
-    #000000 70%);
-
-
+body::before { 
+    content: ""; 
+    position: fixed; 
+    width: 100%; 
+    height: 100%; 
+    background-image: 
+    radial-gradient(white 1px, transparent 1px); 
+    background-size: 60px 60px; 
+    opacity: 0.25; 
+    z-index: -1; 
 }
-
-
-/* Animated 3D Flame */
+/* Flame effect - background only */
 
 body::after {
 
@@ -36,76 +17,53 @@ body::after {
 
     position:fixed;
 
-    bottom:-250px;
+    bottom:-300px;
 
     left:50%;
 
+    width:450px;
 
-    width:500px;
-
-    height:500px;
-
-
-    transform:
-    translateX(-50%)
-    rotate(45deg);
+    height:450px;
 
 
     background:
-
-    linear-gradient(
-    45deg,
-    #ff0000,
-    #ff6600,
-    #ffff00
-    );
+    radial-gradient(circle,
+    #ffff66 0%,
+    #ff6600 30%,
+    #ff0000 55%,
+    transparent 70%);
 
 
-    border-radius:
-    50% 50% 50% 0;
+    transform:translateX(-50%);
 
+    filter:blur(25px);
 
-    filter:
-    blur(35px);
+    opacity:0.35;
 
-
-    opacity:0.7;
-
-
-    z-index:-1;
+    z-index:-2;
 
 
     animation:
-    flameAnimation 2s infinite alternate;
-
-
-    box-shadow:
-
-    0 0 80px #ff3300,
-    0 0 150px #ff9900;
+    flamePulse 3s infinite alternate;
 
 }
 
 
+@keyframes flamePulse {
 
-@keyframes flameAnimation {
-
-
-    0% {
+    from {
 
         transform:
         translateX(-50%)
-        rotate(45deg)
         scale(1);
 
     }
 
 
-    100% {
+    to {
 
         transform:
         translateX(-50%)
-        rotate(55deg)
         scale(1.15);
 
     }
