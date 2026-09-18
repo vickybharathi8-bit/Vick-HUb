@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vignesh Murugamoorthy | Automation & DevOps</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h2>Vignesh</h2>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<section class="hero">
+    <h1>Automation & Workflow Specialist</h1>
+    <p>
+        Project Manager | Microsoft Power Platform | DevOps Enthusiast
+    </p>
+
+    <a href="#projects" class="button">
+        View Projects
+    </a>
+</section>
+
+
+<section id="about">
+    <h2>About Me</h2>
+
+    <p>
+        I am a Project Manager with experience in workflow automation,
+        Microsoft Power Platform, reporting dashboards, and process optimization.
+        I enjoy building solutions that reduce manual effort and improve business efficiency.
+    </p>
+</section>
+
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="cards">
+
+<div>
+<h3>Automation</h3>
+<p>Power Automate, Power Apps, Microsoft Forms</p>
+</div>
+
+<div>
+<h3>Analytics</h3>
+<p>Power BI, Excel Reporting, Data Visualization</p>
+</div>
+
+<div>
+<h3>DevOps</h3>
+<p>Linux, Git, CI/CD, Docker (Learning)</p>
+</div>
+
+<div>
+<h3>Project Management</h3>
+<p>Stakeholder Management, Delivery Planning, Process Improvement</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+
+<div class="project">
+
+<h3>Revenue Tracking Automation</h3>
+
+<p>
+Built a Microsoft Power Automate workflow integrated with Forms and Excel
+to automate data collection, reminders, and reporting.
+</p>
+
+</div>
+
+
+<div class="project">
+
+<h3>Workflow Management App</h3>
+
+<p>
+Created a Power Apps application to track requests, deadlines,
+and operational activities.
+</p>
+
+</div>
+
+
+<div class="project">
+
+<h3>Power BI Dashboard</h3>
+
+<p>
+Developed dashboards to visualize project performance,
+status tracking, and operational KPIs.
+</p>
+
+</div>
+
+
+</section>
+
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>
+LinkedIn: https://github.com/vickybharathi8-bit/Vick-HUb
+</p>
+
+<p>
+GitHub: https://github.com/vickybharathi8-bit/Vick-HUb
+
+
+
+
+
+
+
+
+</p>
+
+</section>
+
+
+<footer>
+
+<p>
+© 2026 Vignesh Murugamoorthy
+</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
