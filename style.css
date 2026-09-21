@@ -373,3 +373,42 @@ footer {
     }
 
 }
+
+.welcome {
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+.welcome h1 {
+
+    font-size:60px;
+
+    background:
+    linear-gradient(90deg,#00ffff,#9b5cff);
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+}
+
+
+.welcome p {
+
+    font-size:22px;
+
+    color:#ddd;
+
+}
