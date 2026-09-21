@@ -212,13 +212,11 @@ footer {
 
 }
 
-/* =================================
-   3D Burning Flame Background
-   ================================= */
+/* ==========================
+   Real Flame Animation
+   ========================== */
 
-body::after {
-
-    content: "";
+.fire-container {
 
     position: fixed;
 
@@ -226,58 +224,55 @@ body::after {
 
     left: 50%;
 
-    width: 180px;
+    width: 220px;
 
     height: 350px;
 
-    transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%);
+
+    z-index:-1;
+
+}
+
+
+/* Common flame shape */
+
+.fire-flame {
+
+    position:absolute;
+
+    bottom:0;
+
+    left:50%;
+
+    transform-origin:bottom center;
+
+    border-radius:
+    50% 50% 20% 50%;
+
+    animation:
+    flameMove 0.6s infinite alternate;
+
+}
+
+
+/* Outer red/orange flame */
+
+.outer {
+
+    width:220px;
+
+    height:330px;
 
 
     background:
 
     linear-gradient(
-        45deg,
-        #ff0000,
-        #ff6600 35%,
-        #ffcc00 65%,
-        #ffffff
+    to top,
+    #ff0000,
+    #ff6600,
+    #ffcc00
     );
-
-
-    border-radius:
-    100% 0 100% 100%;
-
-
-    filter: blur(8px);
-
-
-    opacity:0.9;
-
-
-    z-index:-1;
-
-
-    animation: fireFlicker 0.8s infinite alternate;
-
-}
-
-
-/* Inner flame */
-
-body::before {
-
-    content:"";
-
-    position:fixed;
-
-    bottom:-30px;
-
-    left:50%;
-
-
-    width:80px;
-
-    height:220px;
 
 
     transform:
@@ -285,81 +280,95 @@ body::before {
     rotate(45deg);
 
 
+    filter:
+    blur(8px);
+
+
+}
+
+
+/* Middle flame */
+
+.middle {
+
+    width:140px;
+
+    height:260px;
+
+
     background:
 
     linear-gradient(
-    45deg,
-    #ff3300,
-    #ffff00,
-    white
+    to top,
+    #ff6600,
+    #ffff00
     );
 
 
-    border-radius:
-    100% 0 100% 100%;
+    transform:
+    translateX(-50%)
+    rotate(45deg);
 
 
-    filter:blur(4px);
+    animation-delay:
+    .2s;
+
+}
 
 
-    opacity:0.95;
+/* White hot core */
+
+.inner {
+
+    width:70px;
+
+    height:180px;
 
 
-    z-index:-1;
+    background:
+
+    linear-gradient(
+    to top,
+    white,
+    yellow
+    );
 
 
-    animation:
-    innerFire 0.5s infinite alternate;
+    transform:
+    translateX(-50%)
+    rotate(45deg);
+
+
+    filter:
+    blur(3px);
+
+
+    animation-delay:
+    .4s;
 
 }
 
 
 
-@keyframes fireFlicker {
+@keyframes flameMove {
 
 
-    from {
+    0% {
 
         transform:
         translateX(-50%)
         rotate(40deg)
-        scale(1);
+        scaleY(1);
 
     }
 
 
-    to {
+    100% {
 
         transform:
         translateX(-50%)
         rotate(55deg)
-        scale(1.15);
-
-    }
-
-}
-
-
-
-@keyframes innerFire {
-
-
-    from {
-
-        transform:
-        translateX(-50%)
-        rotate(35deg)
-        scale(1);
-
-    }
-
-
-    to {
-
-        transform:
-        translateX(-50%)
-        rotate(60deg)
-        scale(1.2);
+        scaleY(1.15);
 
     }
 
